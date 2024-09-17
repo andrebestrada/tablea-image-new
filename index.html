@@ -13,11 +13,13 @@
             align-items: center;
             justify-content: center;
         }
+
         #container {
             position: relative;
             width: 100%;
             height: 100%;
         }
+
         #backgroundImage {
             position: absolute;
             top: 0;
@@ -27,10 +29,11 @@
             object-fit: contain;
             z-index: 1;
         }
+
         #overlayImage {
             position: absolute;
-            width: 50%; /* Puedes ajustar este valor */
-            height: 50%; /* Puedes ajustar este valor */
+            width: 50%;
+            height: 50%;
             object-fit: contain;
             z-index: 2;
             top: 50%;
@@ -55,10 +58,10 @@
 
         // Seleccionar la imagen de fondo según la condición
         let backgroundSrc = '';
-        if (condition === 'MARQUEE') {
-            backgroundSrc = 'imagen1.png'; // Ruta a imagen1
-        } else if (condition === 'SHOWCASE') {
-            backgroundSrc = 'imagen2.png'; // Ruta a imagen2
+        if (condition === 'marquee') {
+            backgroundSrc = 'https://andrebestrada.github.io/tablea-image-new/imagen1.png'; // Ruta a imagen1
+        } else if (condition === 'showcase') {
+            backgroundSrc = 'https://andrebestrada.github.io/tablea-image-new/imagen2.png'; // Ruta a imagen2
         } else {
             backgroundSrc = 'default.png'; // Imagen por defecto si es necesario
         }
@@ -81,6 +84,15 @@
 
         if (overlayHeight) {
             document.getElementById('overlayImage').style.height = overlayHeight + 'px';
+        }
+
+        // Ajustar la posición de la imagen superpuesta según la condición
+        if (condition === 'showcase') {
+            // Mover ligeramente a la izquierda
+            document.getElementById('overlayImage').style.left = '45%'; // Ajusta este valor según sea necesario
+        } else {
+            // Posición por defecto
+            document.getElementById('overlayImage').style.left = '50%';
         }
     </script>
 </body>
