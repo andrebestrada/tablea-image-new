@@ -32,13 +32,13 @@
 
         #overlayImage {
             position: absolute;
-            width: 50%;
+            width: 20%;
             height: 50%;
             object-fit: contain;
             z-index: 2;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 45%;
+            left: 20%;
+            transform: translate(-58%, -50%);
         }
     </style>
 </head>
@@ -87,9 +87,15 @@
         }
 
         // Ajustar la posición de la imagen superpuesta según la condición
-        if (condition === 'showcase') {
+        if (condition === 'SHOWCASE') {
             // Mover ligeramente a la izquierda
-            document.getElementById('overlayImage').style.left = '45%'; // Ajusta este valor según sea necesario
+            document.getElementById('overlayImage').style.left = '19.5%'; // Ajusta este valor según sea necesario
+            document.getElementById('overlayImage').style.top = '40%'; // Ajusta este valor según sea necesario
+            
+            document.getElementById('backgroundImage').style.width = '120%'; // Ajusta este valor según sea necesario
+            document.getElementById('backgroundImage').style.left = '-10%'; // Ajusta este valor según sea necesario
+            document.getElementById('backgroundImage').style.top = '-10%'; // Ajusta este valor según sea necesario
+
         } else {
             // Posición por defecto
             document.getElementById('overlayImage').style.left = '50%';
