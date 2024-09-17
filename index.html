@@ -73,4 +73,15 @@
 
         // Opcional: Ajustar el tamaño de la imagen superpuesta si se pasa por parámetro
         const overlayWidth = urlParams.get('overlayWidth');
-        const overlayHeight = urlParams.get('overl
+        const overlayHeight = urlParams.get('overlayHeight');
+
+        if (overlayWidth) {
+            document.getElementById('overlayImage').style.width = overlayWidth + 'px';
+        }
+
+        if (overlayHeight) {
+            document.getElementById('overlayImage').style.height = overlayHeight + 'px';
+        }
+    </script>
+</body>
+</html>
